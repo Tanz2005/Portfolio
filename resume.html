@@ -1,97 +1,298 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanishq Saxena Portfolio</title>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #BA997E; color: #4A4E40; }
-        header { background: linear-gradient(90deg, #9B6229, #655D4D); color: #fff; padding: 2rem; text-align: center; }
-        nav { display: flex; justify-content: center; background: #2B372D; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); position: sticky; top: 0; z-index: 1000; }
-        nav a { color: #BA997E; padding: 1rem; text-decoration: none; font-weight: bold; }
-        nav a:hover { color: #9B6229; }
-        section { padding: 2rem; margin: 1rem auto; max-width: 800px; background: #EEEFE0; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
-        .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
-        .project { border: 1px solid #ddd; padding: 1rem; border-radius: 8px; background: #D1D8BE; transition: transform 0.2s ease; }
-        .project:hover { transform: translateY(-5px); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); }
-        footer { text-align: center; padding: 1rem; background: #2B372D; color: #fff; margin-top: 2rem; }
-        footer a { color: #9B6229; text-decoration: none; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tanishq Saxena | Portfolio</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background:#BA997E;
+      color:#4A4E40;
+      line-height:1.6;
+    }
+
+    header{
+      background:linear-gradient(90deg,#9B6229,#655D4D);
+      color:white;
+      padding:4rem 1rem;
+      text-align:center;
+    }
+
+    header h1{
+      font-size:3rem;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:1.2rem;
+      opacity:0.9;
+    }
+
+    nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      background:#2B372D;
+      box-shadow:0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    nav a{
+      color:#EEEFE0;
+      text-decoration:none;
+      padding:1rem;
+      font-weight:600;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#BA997E;
+      background:#3d4a3f;
+    }
+
+    section{
+      max-width:1000px;
+      margin:2rem auto;
+      padding:2rem;
+      background:#EEEFE0;
+      border-radius:12px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    section h2{
+      margin-bottom:1rem;
+      color:#9B6229;
+      border-bottom:2px solid #BA997E;
+      padding-bottom:0.5rem;
+    }
+
+    ul{
+      padding-left:20px;
+    }
+
+    .projects{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:1.5rem;
+      margin-top:1rem;
+    }
+
+    .project{
+      background:#D1D8BE;
+      padding:1.5rem;
+      border-radius:10px;
+      transition:0.3s ease;
+      border:1px solid rgba(0,0,0,0.1);
+    }
+
+    .project:hover{
+      transform:translateY(-8px);
+      box-shadow:0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .project h3{
+      margin-bottom:0.7rem;
+      color:#2B372D;
+    }
+
+    a{
+      color:#9B6229;
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    footer{
+      background:#2B372D;
+      color:white;
+      text-align:center;
+      padding:2rem 1rem;
+      margin-top:2rem;
+    }
+
+    @media(max-width:768px){
+
+      header h1{
+        font-size:2.2rem;
+      }
+
+      nav{
+        flex-direction:column;
+        align-items:center;
+      }
+
+      nav a{
+        width:100%;
+        text-align:center;
+      }
+
+      section{
+        margin:1rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <h1>Tanishq Saxena</h1>
-        <p>Computer Science Student | Machine Learning & Web Development Enthusiast</p>
-    </header>
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-    </nav>
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a computer science student passionate about machine learning and web development. I enjoy tackling challenges, learning new technologies, and building impactful solutions.</p>
-    </section>
-    <section id="experience">
-        <h2>Experience</h2>
-        <ul>
-            <li><strong>Python Development Course</strong>, Tutedude (Aug 2025 - Oct 2025)<br>
-                Focused on Python, Data Structures & Algorithms, C++, and Competitive Programming.</li>
-            <li><strong>Race To Certification 2025</strong>, Oracle University (Sept 2025 - Oct 2025)<br>
-                Gained hands-on knowledge in AI, Data Science, and Cloud infrastructure.</li>
-            <li><strong>AICTE Internship</strong>, Edunet Foundation (Aug 2025 - Oct 2025)<br>
-                Selected for the IBM SkillsBuild internship; collaborated on front-end development projects under mentor guidance.</li>
-        </ul>
-    </section>
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-            <div class="project">
-                <h3>College Attendance System</h3>
-                <p>MERN-stack application with role-based login, attendance tracking, and graphical analytics using JWT for secure authentication.</p>
-            </div>
-            <div class="project">
-                <h3>Style Transfer App</h3>
-                <p>Deep learning web app using TensorFlow and Streamlit, allowing users to apply artistic styles to images with custom strength adjustments.</p>
-            </div>
-            <div class="project">
-                <h3>Task Manager</h3>
-                <p>Frontend app with CRUD functionality, progress tracking, dark mode, and task categorization, deployed on Vercel.</p>
-            </div>
-            <div class="project">
-                <h3>Currency Converter</h3>
-                <p>React application with real-time API integration, dynamic flags, and optimized state management.</p>
-            </div>
-        </div>
-    </section>
-    <section id="education">
-        <h2>Education</h2>
-        <ul>
-            <li><strong>Bachelor of Technology</strong>, Guru Gobind Singh Indraprastha University (Aug 2023 - May 2027)<br>GPA: 8.4/10.0</li>
-            <li><strong>Bachelor of Science</strong>, Indian Institute of Technology Guwahati (Oct 2023 - Oct 2027)</li>
-        </ul>
-    </section>
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li><strong>Languages:</strong> C, C++, Python</li>
-            <li><strong>Web Development:</strong> HTML, CSS, JavaScript, ReactJS</li>
-            <li><strong>Frameworks & Databases:</strong> Django, Flask, PostgreSQL, OpenCV, Selenium, MongoDB, MySQL</li>
-            <li><strong>Core CS:</strong> Data Structures & Algorithms, OOP, Operating Systems, RDBMS, Computer Networks</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:tanishq02022005@gmail.com">tanishq02022005@gmail.com</a></p>
-        <p>Phone: +91 9999055448</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/tanishq-saxena-58b1b4300" target="_blank">linkedin.com/in/tanishq-saxena</a></p>
-    </section>
-    <footer>
-        <p>&copy; 2026 Tanishq Saxena. All Rights Reserved.</p>
-        <p>Visit my <a href="https://www.linkedin.com/in/tanishq-saxena-58b1b4300" target="_blank">LinkedIn</a> for more details.</p>
-    </footer>
+
+  <header>
+    <h1>Tanishq Saxena</h1>
+    <p>Computer Science Student | Machine Learning & Web Development Enthusiast</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am a passionate Computer Science student focused on Machine Learning,
+      Web Development, and problem solving. I enjoy building impactful
+      applications and continuously learning modern technologies.
+    </p>
+  </section>
+
+  <section id="experience">
+    <h2>Experience</h2>
+
+    <ul>
+      <li>
+        <strong>Python Development Course — Tutedude</strong><br>
+        Aug 2025 - Oct 2025<br>
+        Focused on Python, DSA, C++, and Competitive Programming.
+      </li>
+
+      <br>
+
+      <li>
+        <strong>Race To Certification 2025 — Oracle University</strong><br>
+        Sept 2025 - Oct 2025<br>
+        Worked on AI, Cloud Infrastructure, and Data Science concepts.
+      </li>
+
+      <br>
+
+      <li>
+        <strong>AICTE Internship — Edunet Foundation</strong><br>
+        Aug 2025 - Oct 2025<br>
+        Collaborated on frontend development projects under IBM SkillsBuild.
+      </li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <div class="projects">
+
+      <div class="project">
+        <h3>College Attendance System</h3>
+        <p>
+          MERN stack app with JWT authentication, role-based login,
+          attendance tracking, and analytics dashboard.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Style Transfer App</h3>
+        <p>
+          TensorFlow + Streamlit application for applying artistic styles
+          to images using deep learning.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Task Manager</h3>
+        <p>
+          CRUD-based productivity app with dark mode, progress tracking,
+          and category management.
+        </p>
+      </div>
+
+      <div class="project">
+        <h3>Currency Converter</h3>
+        <p>
+          React application with real-time exchange rates and dynamic
+          country flags.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+
+    <ul>
+      <li>
+        <strong>B.Tech — Guru Gobind Singh Indraprastha University</strong><br>
+        2023 - 2027<br>
+        GPA: 8.4/10
+      </li>
+
+      <br>
+
+      <li>
+        <strong>B.Sc — IIT Guwahati</strong><br>
+        2023 - 2027
+      </li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+
+    <ul>
+      <li><strong>Languages:</strong> C, C++, Python</li>
+      <li><strong>Frontend:</strong> HTML, CSS, JavaScript, ReactJS</li>
+      <li><strong>Backend:</strong> Django, Flask</li>
+      <li><strong>Databases:</strong> MongoDB, PostgreSQL, MySQL</li>
+      <li><strong>Tools:</strong> OpenCV, Selenium, Git</li>
+      <li><strong>Core CS:</strong> DSA, OOP, OS, CN, DBMS</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+
+    <p>Email:
+      <a href="mailto:tanishq02022005@gmail.com">
+        tanishq02022005@gmail.com
+      </a>
+    </p>
+
+    <p>Phone: +91 9999055448</p>
+
+    <p>
+      LinkedIn:
+      <a href="https://www.linkedin.com/in/tanishq-saxena-58b1b4300" target="_blank">
+        linkedin.com/in/tanishq-saxena
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    <p>© 2026 Tanishq Saxena. All Rights Reserved.</p>
+  </footer>
+
 </body>
 </html>
